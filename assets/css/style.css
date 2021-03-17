@@ -1,7 +1,9 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  color: #272829;
+  
+  background-color: #1D1D1D ;
+  color:white;
 }
 
 a {
@@ -13,11 +15,13 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h5, h6 {
   font-family: "Raleway", sans-serif;
+  color: white;
+}   
+h3{
+  color: #F7AF9D;
 }
-
-
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -426,7 +430,7 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #050d18;
+  color: #EF8354;
 }
 
 .resume .resume-item {
@@ -442,13 +446,14 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #050d18;
+  color: #F7AF9D;
   margin-bottom: 10px;
+
 }
 
 .resume .resume-item h5 {
   font-size: 16px;
-  background: #e4edf9;
+  background:grey;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
