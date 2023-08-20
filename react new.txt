@@ -1,0 +1,4 @@
+npx create-react-app@latest my-new-app
+
+npm run deploy
+npm start
