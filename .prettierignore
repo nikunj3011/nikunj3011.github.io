@@ -1,0 +1,17 @@
+node_modules/
+dist/
+coverage/
+package-lock.json
+public/
+
+# Historical website assets and the retired Create React App prototype.
+assets/
+css/
+fonts/
+images/
+inc/
+js/
+react portfolio/
+index2.html
+portfolio-details1.html
+styles.html

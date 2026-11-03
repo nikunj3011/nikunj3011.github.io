@@ -4,22 +4,39 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "predev": "npm run format && npm run lint:fix && npm run typecheck",
     "dev": "vite",
-    "start": "vite",
+    "start": "npm run dev",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint src vite.config.ts eslint.config.js --max-warnings 0",
+    "lint:fix": "npm run lint -- --fix",
+    "check": "npm run format:check && npm run lint && npm run typecheck",
     "typecheck": "tsc --noEmit",
     "build": "npm run typecheck && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "gsap": "^3.15.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-github-calendar": "^5.0.9"
+    "react-github-calendar": "^5.0.9",
+    "three": "^0.187.0"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.187.0",
     "@vitejs/plugin-react": "^6.0.0",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.14.0",
+    "prettier": "3.9.10",
     "typescript": "^5.9.0",
+    "typescript-eslint": "^8.72.1",
     "vite": "^8.0.0"
   },
   "engines": {

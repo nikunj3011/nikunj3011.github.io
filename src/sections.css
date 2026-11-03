@@ -1,0 +1,348 @@
+/* One continuous quantum world, with readable frosted surfaces in every section. */
+.portfolio-theme.theme-quantum .site-header {
+  background: #f5f6f1dd;
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid #ffffffc0;
+}
+.portfolio-theme.theme-quantum .navigation a[aria-current='location'] {
+  color: #70552f;
+}
+.portfolio-theme.theme-quantum .navigation a[aria-current='location']::after {
+  transform: scaleX(1);
+}
+.portfolio-theme.theme-quantum .section {
+  position: relative;
+  padding-block: 80px;
+  color: #23373d;
+}
+.portfolio-theme.theme-quantum .section:not(.contact) h2 {
+  font-size: clamp(40px, 5vw, 68px);
+  line-height: 1.04;
+}
+.portfolio-theme.theme-quantum .section-label {
+  color: #6e5735;
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+.portfolio-theme.theme-quantum .about-panel {
+  background: #fafbf770;
+  border-block: 1px solid #fff;
+  backdrop-filter: blur(5px);
+}
+.portfolio-theme.theme-quantum .section-tinted {
+  background: #eaf0eb70;
+  border-block: 1px solid #ffffffc0;
+}
+.portfolio-theme.theme-quantum .statement {
+  background: #dce5df55;
+  min-height: 65svh;
+}
+.portfolio-theme.theme-quantum .statement h2 {
+  font-size: clamp(60px, 8vw, 110px);
+}
+.portfolio-theme.theme-quantum .statement-orbit {
+  opacity: 0.045;
+}
+.portfolio-theme.theme-quantum .statement-note {
+  color: #40585f;
+}
+.portfolio-theme.theme-quantum .experience-row {
+  grid-template-columns: minmax(180px, 0.75fr) minmax(0, 2fr);
+  background: #ffffffa8;
+  border: 1px solid #fff;
+  border-radius: 18px;
+  padding: 32px;
+  margin-top: 20px;
+  box-shadow: 0 8px 30px #324c5206;
+}
+.portfolio-theme.theme-quantum .experience-row:last-child {
+  padding-bottom: 32px;
+}
+.portfolio-theme.theme-quantum .experience-meta h3 {
+  font-size: 33px;
+}
+.portfolio-theme.theme-quantum .experience-row h4 {
+  font-size: 28px;
+}
+.portfolio-theme.theme-quantum .highlights {
+  color: #40575e;
+  font-size: 14px;
+  line-height: 1.85;
+}
+.portfolio-theme.theme-quantum .period,
+.portfolio-theme.theme-quantum .experience-meta > p:last-child {
+  color: #586b70;
+}
+.portfolio-theme.theme-quantum .projects-section {
+  background: #f2f6f02b;
+}
+.portfolio-theme.theme-quantum .project-runway {
+  overflow: visible;
+  background: transparent;
+  padding: 0;
+}
+.portfolio-theme.theme-quantum .project-window {
+  width: min(1320px, calc(100% - 80px));
+  overflow: visible;
+  scroll-snap-type: none;
+}
+.portfolio-theme.theme-quantum .project-track {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  gap: 28px;
+  transform: none !important;
+  will-change: auto;
+}
+.portfolio-theme.theme-quantum .project-card {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  background: #fffffff0;
+  box-shadow: 0 12px 36px #30464f09;
+  scroll-snap-align: none;
+}
+.portfolio-theme.theme-quantum .project-card:hover {
+  box-shadow: 0 16px 38px #30464f16;
+}
+.portfolio-theme.theme-quantum .project-art {
+  height: 230px;
+}
+.portfolio-theme.theme-quantum .project-body {
+  padding: 27px;
+}
+.portfolio-theme.theme-quantum .project-card h3 {
+  font-size: 34px;
+  line-height: 1.08;
+}
+.portfolio-theme.theme-quantum .project-body > p {
+  color: #40585f;
+  font-size: 14px;
+  line-height: 1.85;
+}
+.portfolio-theme.theme-quantum .project-top {
+  color: #586e75;
+  font-size: 10px;
+}
+.portfolio-theme.theme-quantum .tags li {
+  font-size: 11px;
+  color: #405b62;
+  border-color: #63818735;
+  background: #f6f9f5a0;
+}
+.portfolio-theme.theme-quantum .project-links {
+  color: #294e53;
+  font-size: 12px;
+}
+.gallery-progress {
+  display: none;
+}
+.portfolio-theme.theme-quantum .gallery-footer {
+  color: #536d74;
+  font-size: 9px;
+}
+.portfolio-theme.theme-quantum .earlier-projects {
+  margin-top: 55px;
+  background: #ffffffa8;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  padding: 30px;
+}
+.portfolio-theme.theme-quantum .archive-link {
+  color: #29474f;
+  padding-block: 20px;
+}
+.portfolio-theme.theme-quantum .archive-link small {
+  color: #5b747a;
+}
+.portfolio-theme.theme-quantum .skills-grid {
+  gap: 20px;
+}
+.portfolio-theme.theme-quantum .skill-group {
+  background: #ffffffba;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  padding: 28px;
+}
+.portfolio-theme.theme-quantum .skill-group h3 {
+  font-size: 25px;
+  margin-bottom: 18px;
+}
+.portfolio-theme.theme-quantum .credentials-grid {
+  gap: 25px;
+  margin-top: 35px;
+  padding-top: 0;
+  border: 0;
+}
+.portfolio-theme.theme-quantum .credentials-grid > div {
+  background: #ffffffba;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  padding: 30px;
+}
+.portfolio-theme.theme-quantum .education-item p,
+.portfolio-theme.theme-quantum .certifications {
+  color: #40585f;
+  font-size: 14px;
+}
+.portfolio-theme.theme-quantum .calendar-panel {
+  background: #ffffffd9;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  padding: 35px;
+  box-shadow: 0 12px 35px #2a4b4a08;
+}
+.portfolio-theme.theme-quantum .calendar-profile {
+  color: #285c58;
+  border-color: #70958f;
+}
+.portfolio-theme.theme-quantum .calendar-description {
+  font-size: 14px;
+  color: #425e64;
+  margin-top: 22px;
+}
+.portfolio-theme.theme-quantum .contact {
+  background: #e4ede6a0;
+  border-block: 1px solid #fff;
+}
+.portfolio-theme.theme-quantum .contact-title {
+  font-size: clamp(65px, 9vw, 125px);
+}
+.portfolio-theme.theme-quantum .contact-intro,
+.portfolio-theme.theme-quantum .contact-details,
+.portfolio-theme.theme-quantum .contact-socials {
+  color: #3c565f;
+  font-size: 14px;
+}
+.portfolio-theme.theme-quantum .contact-email {
+  color: #2c4a52;
+  font-size: clamp(20px, 3vw, 38px);
+}
+.portfolio-theme.theme-quantum .footer {
+  color: #425f67;
+  padding-block: 30px;
+}
+.portfolio-theme .about-panel {
+  padding-block: 48px;
+}
+.portfolio-theme.theme-quantum .about-panel {
+  padding-block: 48px;
+}
+.portfolio-theme .about-panel .about-layout {
+  gap: 35px;
+}
+.portfolio-theme .about-panel h2,
+.portfolio-theme.theme-quantum .about-panel h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  text-transform: none;
+}
+.portfolio-theme .about-panel .about-copy p:first-child {
+  font-size: 18px;
+}
+.portfolio-theme .statement,
+.portfolio-theme.theme-quantum .statement {
+  min-height: 0;
+  padding-block: 65px;
+}
+.portfolio-theme .statement h2,
+.portfolio-theme.theme-quantum .statement h2 {
+  font-size: clamp(42px, 6vw, 80px);
+  margin-block: 25px;
+}
+.portfolio-theme.theme-space .project-runway {
+  background: transparent;
+  overflow: visible;
+}
+.portfolio-theme.theme-space .project-window {
+  width: min(1320px, calc(100% - 80px));
+  overflow: visible;
+}
+.portfolio-theme.theme-space .project-track {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  gap: 28px;
+}
+.portfolio-theme.theme-space .project-card {
+  width: 100%;
+  min-width: 0;
+  border-radius: 16px;
+  border: 1px solid #ffffff20;
+  background: #101a33e8;
+}
+.portfolio-theme.theme-space .section-tinted {
+  background: #101a33b8;
+}
+.portfolio-theme.theme-space .project-art {
+  height: 230px;
+}
+@media (max-width: 900px) {
+  .portfolio-theme.theme-space .project-window {
+    width: calc(100% - 48px);
+  }
+  .portfolio-theme.theme-quantum .project-window {
+    width: calc(100% - 48px);
+  }
+  .portfolio-theme.theme-quantum .project-track {
+    gap: 20px;
+  }
+  .portfolio-theme.theme-quantum .project-body {
+    padding: 22px;
+  }
+  .portfolio-theme.theme-quantum .project-card h3 {
+    font-size: 29px;
+  }
+  .portfolio-theme.theme-quantum .experience-row {
+    gap: 25px;
+    padding: 25px;
+  }
+}
+@media (max-width: 600px) {
+  .portfolio-theme.theme-space .project-window {
+    width: calc(100% - 40px);
+  }
+  .portfolio-theme.theme-space .project-track {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .portfolio-theme.theme-quantum .section {
+    padding-block: 55px;
+  }
+  .portfolio-theme.theme-quantum .project-window {
+    width: calc(100% - 40px);
+  }
+  .portfolio-theme.theme-quantum .project-track,
+  .portfolio-theme.theme-quantum .experience-row {
+    grid-template-columns: 1fr;
+  }
+  .portfolio-theme.theme-quantum .section:not(.contact) h2 {
+    font-size: 43px;
+  }
+  .portfolio-theme.theme-quantum .project-art {
+    height: 200px;
+  }
+  .portfolio-theme.theme-quantum .project-card h3 {
+    font-size: 32px;
+  }
+  .portfolio-theme.theme-quantum .experience-row {
+    gap: 15px;
+    padding: 24px;
+  }
+  .portfolio-theme.theme-quantum .earlier-projects,
+  .portfolio-theme.theme-quantum .skill-group,
+  .portfolio-theme.theme-quantum .credentials-grid > div,
+  .portfolio-theme.theme-quantum .calendar-panel {
+    padding: 24px;
+  }
+  .portfolio-theme.theme-quantum .statement {
+    min-height: 0;
+  }
+  .portfolio-theme.theme-quantum .statement h2 {
+    font-size: 45px;
+  }
+}
