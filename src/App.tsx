@@ -1,3 +1,4 @@
+import Icon from './Icon';
 import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
 import { useEditorialMotion } from './useEditorialMotion';
@@ -186,7 +187,7 @@ export default function App() {
               </a>
             ))}
             <a className="nav-resume" href={resume} download>
-              Resume ↗
+              Resume <Icon />
             </a>
           </nav>
         </div>
@@ -208,23 +209,26 @@ export default function App() {
               </p>
               <div className="actions">
                 <a className="button primary" href="#projects">
-                  Explore my work ↗
+                  Explore my work <Icon />
                 </a>
                 <a className="button subtle" href={resume} download>
-                  Download resume ↓
+                  Download resume <Icon name="down" />
                 </a>
               </div>
               <div className="hero-links" aria-label="Social profiles">
                 {socialLinks.map((link) => (
                   <a key={link.name} href={link.url}>
-                    {link.name} ↗
+                    {link.name} <Icon />
                   </a>
                 ))}
               </div>
               <div className="building-caption">
                 <span>CURRENTLY BUILDING AT</span>
                 <strong>
-                  Vinvox <span aria-hidden="true">↗</span>
+                  Vinvox{' '}
+                  <span aria-hidden="true">
+                    <Icon />
+                  </span>
                 </strong>
               </div>
             </div>
@@ -248,7 +252,7 @@ export default function App() {
                   type="button"
                   onClick={() => setSeed(randomSeed())}
                 >
-                  ↻ New scene
+                  <Icon name="refresh" /> New scene
                 </button>
               </div>
               <div className="mobile-scene-window" aria-hidden="true" />
@@ -279,7 +283,9 @@ export default function App() {
 
           <div className="container hero-bottom">
             <span>.NET / REACT / PYTHON / ANDROID / AZURE</span>
-            <a href="#about">A little more about me ↓</a>
+            <a href="#about">
+              A little more about me <Icon name="down" />
+            </a>
           </div>
           <div className="scene-caption" aria-live="polite">
             {' '}
@@ -312,7 +318,7 @@ export default function App() {
                 the tools that a project needs.
               </p>
               <a className="text-link" href={resume} download>
-                The story so far — download resume ↗
+                The story so far — download resume <Icon />
               </a>
             </div>
           </div>
@@ -374,7 +380,7 @@ export default function App() {
                 </h2>
               </div>
               <a className="text-link" href="https://github.com/nikunj3011">
-                More on GitHub ↗
+                More on GitHub <Icon />
               </a>
             </div>
             <div className="project-window">
@@ -391,9 +397,13 @@ export default function App() {
                       <p>{project.description}</p>
                       <Tags items={project.tags} />
                       <div className="project-links">
-                        <a href={project.source}>View source ↗</a>
+                        <a href={project.source}>
+                          View source <Icon />
+                        </a>
                         {project.live && (
-                          <a href={project.live}>{project.liveLabel ?? 'Visit site'} ↗</a>
+                          <a href={project.live}>
+                            {project.liveLabel ?? 'Visit site'} <Icon />
+                          </a>
                         )}
                       </div>
                     </div>
@@ -419,7 +429,9 @@ export default function App() {
                     <small>{project.type}</small>
                     <strong>{project.name}</strong>
                   </span>
-                  <span aria-hidden="true">↗</span>
+                  <span aria-hidden="true">
+                    <Icon />
+                  </span>
                 </a>
               ))}
             </div>
@@ -458,13 +470,15 @@ export default function App() {
                 <ul className="certifications">
                   {certifications.map((item) => (
                     <li key={item}>
-                      <span aria-hidden="true">↗</span>
+                      <span aria-hidden="true">
+                        <Icon />
+                      </span>
                       {item}
                     </li>
                   ))}
                 </ul>
                 <a className="text-link" href="https://www.linkedin.com/in/nikunj3011/">
-                  Find out more on LinkedIn ↗
+                  Find out more on LinkedIn <Icon />
                 </a>
               </div>
             </div>
@@ -484,7 +498,7 @@ export default function App() {
               </p>
             </div>
             <a className="text-link" href="https://github.com/nikunj3011">
-              Visit my GitHub ↗
+              Visit my GitHub <Icon />
             </a>
           </div>
           <div className="calendar-panel">
@@ -498,7 +512,7 @@ export default function App() {
               errorMessage="The contribution calendar is temporarily unavailable. You can still view all my activity on GitHub."
             />
             <a className="calendar-profile" href="https://github.com/nikunj3011?tab=overview">
-              View contributions on GitHub ↗
+              View contributions on GitHub <Icon />
             </a>
           </div>
         </section>
@@ -515,7 +529,10 @@ export default function App() {
               Starts with a conversation. Let’s make something that matters.
             </p>
             <a className="contact-email" href="mailto:nikunjrathod3011@gmail.com">
-              nikunjrathod3011@gmail.com <span aria-hidden="true">↗</span>
+              nikunjrathod3011@gmail.com{' '}
+              <span aria-hidden="true">
+                <Icon />
+              </span>
             </a>
             <div className="contact-details">
               <span>Canada</span>
@@ -523,7 +540,7 @@ export default function App() {
             <div className="contact-socials" aria-label="Social profiles">
               {socialLinks.map((link) => (
                 <a key={link.name} href={link.url}>
-                  {link.name} ↗
+                  {link.name} <Icon />
                 </a>
               ))}
             </div>
@@ -533,9 +550,15 @@ export default function App() {
       <footer className="container footer">
         <p>© {new Date().getFullYear()} Nikunj Rathod</p>
         <div>
-          <a href="https://github.com/nikunj3011">GitHub ↗</a>
-          <a href="https://www.linkedin.com/in/nikunj3011/">LinkedIn ↗</a>
-          <a href="#home">Back to top ↑</a>
+          <a href="https://github.com/nikunj3011">
+            GitHub <Icon />
+          </a>
+          <a href="https://www.linkedin.com/in/nikunj3011/">
+            LinkedIn <Icon />
+          </a>
+          <a href="#home">
+            Back to top <Icon name="up" />
+          </a>
         </div>
       </footer>
     </div>

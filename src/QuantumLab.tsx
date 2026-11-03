@@ -1,3 +1,4 @@
+import Icon from './Icon';
 import type { QuantumMode } from './QuantumWorld';
 
 interface Props {
@@ -63,7 +64,9 @@ export default function QuantumLab({
           >
             <small>0{index + 1}</small>
             {item.name}
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true">
+              <Icon />
+            </span>
           </button>
         ))}
       </div>
@@ -135,7 +138,9 @@ export default function QuantumLab({
               : mode === 'entangled'
                 ? 'pair'
                 : 'qubit'}{' '}
-          <span aria-hidden="true">↗</span>
+          <span aria-hidden="true">
+            <Icon />
+          </span>
         </button>
         <p className="measurement-result" aria-live="polite">
           {shots === 0
@@ -162,7 +167,7 @@ export default function QuantumLab({
           with probability ½. It illustrates joint-state correlations, not communication between the
           qubits. Measurement flashes fade as a new state is prepared.{' '}
           <a href="https://quantum.cloud.ibm.com/learning/en/courses/utility-scale-quantum-computing/bits-gates-and-circuits">
-            Learn about qubits, gates, and measurement ↗
+            Learn about qubits, gates, and measurement <Icon />
           </a>
         </p>
       </details>
