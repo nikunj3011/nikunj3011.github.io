@@ -98,7 +98,7 @@ export default function App() {
     const update = () => {
       frame = 0;
       const mobile = window.matchMedia('(max-width: 600px)').matches;
-      const heroBottom = 
+      const heroBottom =
         rootRef.current?.querySelector('#home')?.getBoundingClientRect().bottom ?? 0;
       const progress = mobile
         ? (window.innerHeight * 0.4 - heroBottom) / (window.innerHeight * 0.4)
