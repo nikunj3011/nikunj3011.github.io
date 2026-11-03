@@ -9,12 +9,14 @@
     "start": "npm run dev",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint": "eslint src vite.config.ts eslint.config.js --max-warnings 0",
+    "lint": "eslint src scripts vite.config.ts eslint.config.js --max-warnings 0",
     "lint:fix": "npm run lint -- --fix",
     "check": "npm run format:check && npm run lint && npm run typecheck",
     "typecheck": "tsc --noEmit",
     "build": "npm run typecheck && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "postbuild": "npm run verify:build",
+    "verify:build": "node scripts/verify-build.mjs"
   },
   "dependencies": {
     "gsap": "^3.15.0",

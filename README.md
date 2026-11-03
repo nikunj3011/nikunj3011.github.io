@@ -53,6 +53,6 @@ Reduced-motion mode skips the opening curtain and scroll-linked motion. Navigati
 
 ## GitHub Pages
 
-The workflow in `.github/workflows/deploy.yml` builds and deploys `dist` on pushes to `main` or `master`. In repository **Settings → Pages → Build and deployment**, select **GitHub Actions** as the source. Contact links open an email application; no backend is required.
+The workflow in `.github/workflows/deploy.yml` automatically checks, builds, and deploys `dist` on every push to `main` or `master`. One-time setup: in repository **Settings → Pages → Build and deployment**, select **GitHub Actions** as the source. The workflow verifies this setting first and fails with a direct settings link if branch publishing is still enabled; GitHub requires administrator permissions to change the publishing source. After changing it, rerun the failed workflow or push again. Do not publish the repository root: it contains the development HTML, which loads TypeScript directly. `npm run build` also runs `scripts/verify-build.mjs` to confirm the production HTML references existing compiled JavaScript files before publishing. Contact links open an email application; no backend is required.
 
 Historical HTML assets and the earlier `react portfolio` Create React App prototype are retained for reference and are not part of this build. Run the commands above from the repository root.

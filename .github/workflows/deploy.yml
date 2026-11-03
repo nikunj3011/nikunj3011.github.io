@@ -15,13 +15,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Verify Pages publishing source
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const settingsUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/settings/pages`;
+            try {
+              const { data } = await github.rest.repos.getPages(context.repo);
+              if (data.build_type !== 'workflow') {
+                core.setFailed(`One-time setup required: open ${settingsUrl} and select Build and deployment → Source → GitHub Actions. Branch publishing serves unbuilt TypeScript and causes a blank page. Then rerun this workflow.`);
+              }
+            } catch (error) {
+              core.setFailed(`Could not verify GitHub Pages configuration (${error.status ?? 'unknown status'}). Open ${settingsUrl}, enable Pages with GitHub Actions as the source, then rerun this workflow.`);
+            }
       - uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
-      - run: npm ci
-      - run: npm run check
-      - run: npm run build
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Check formatting, lint, and TypeScript
+        run: npm run check
+      - name: Build and verify production files
+        run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
